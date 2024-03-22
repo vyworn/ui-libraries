@@ -81,10 +81,19 @@ local function MakeDraggable(topbarobject, object)
 	)
 end
 
+local LibName = tostring(math.random(1, 100)) .. tostring(math.random(1, 50)) .. tostring(math.random(1, 100))
 local Discord = Instance.new("ScreenGui")
-Discord.Name = "Discord"
+Discord.Name = LibName
 Discord.Parent = game.CoreGui
 Discord.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+function DiscordLib:ToggleUI()
+	if game.CoreGui[LibName].Enabled then
+			game.CoreGui[LibName].Enabled = false
+	else
+			game.CoreGui[LibName].Enabled = true
+	end
+end
 
 function DiscordLib:Window(text)
 	local currentservertoggled = ""
