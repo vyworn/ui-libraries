@@ -84,6 +84,7 @@ end
 local LibName = "DiscordLib"
 
 function DiscordLib:ToggleUI()
+	print(tostring(game.CoreGui[LibName].Enabled))
 	if game.CoreGui[LibName].Enabled then
 			game.CoreGui[LibName].Enabled = false
 	else
