@@ -81,16 +81,7 @@ local function MakeDraggable(topbarobject, object)
 	)
 end
 
-local LibName = "Discord"
-function DiscordLib:ToggleUI(init)
-    if init then 
-        if game.CoreGui[LibName].Enabled then
-            game.CoreGui[LibName].Enabled = false
-        else
-            game.CoreGui[LibName].Enabled = true
-        end
-    end
-end
+local LibName = "DiscordLib"
 
 function DiscordLib:Window(text)
 	local currentservertoggled = ""
@@ -468,7 +459,7 @@ function DiscordLib:Window(text)
 	CloseSettingsBtnIcon.Size = UDim2.new(0, 19, 0, 19)
 	CloseSettingsBtnIcon.Image = "http://www.roblox.com/asset/?id=6035047409"
 	CloseSettingsBtnIcon.ImageColor3 = Color3.fromRGB(222, 222, 222)
-	
+
 	CloseSettingsBtn.MouseButton1Click:Connect(function()
 		settingsopened = false
 		TopFrameHolder.Visible = true
