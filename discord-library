@@ -83,21 +83,6 @@ end
 
 local LibName = "DiscordLib"
 
-function DiscordLib:ToggleUI(init)
-	if init then
-		print("init")
-		if game.CoreGui.LibName.MainFrame.Enabled then
-				print("found mainframe of discordlib")
-				game.CoreGui.LibName.MainFrame.Enabled = false
-				print("disabled")
-		else
-				print("not found mainframe of discordlib")
-				game.CoreGui.LibName.MainFrame.Enabled = true
-				print("enabled")
-		end
-	end
-end
-
 function DiscordLib:Window(text)
 	local currentservertoggled = ""
 	local minimized = false
@@ -300,6 +285,24 @@ function DiscordLib:Window(text)
 
 	ServersHoldPadding.Name = "ServersHoldPadding"
 	ServersHoldPadding.Parent = ServersHold
+
+	function DiscordLib:ToggleUI(init)
+		if init then
+			print("init")
+			if game.CoreGui.LibName.Enabled then
+					print("found mainframe of discordlib")
+					game.CoreGui.LibName.Enabled = false
+					print("disabled")
+			else
+					print("not found mainframe of discordlib")
+					game.CoreGui.LibName.Enabled = true
+					print("enabled")
+			end
+		else 
+			print("not init")
+		end
+	end
+	
 
 	CloseBtn.MouseButton1Click:Connect(
 		function()
