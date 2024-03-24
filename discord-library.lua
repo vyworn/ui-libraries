@@ -112,6 +112,7 @@ function DiscordLib:Window(text)
 	ScreenGui.Name = LibName
 	ScreenGui.Parent = game.CoreGui
 	ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	ScreenGui.ResetOnSpawn = false
 
 	MainFrame.Name = "MainFrame"
 	MainFrame.Parent = ScreenGui
