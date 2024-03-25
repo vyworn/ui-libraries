@@ -2140,6 +2140,7 @@ function DiscordLib:Window(text)
 				Button.TextColor3 = Color3.fromRGB(255, 255, 255)
 				Button.TextSize = 14.000
 				Button.Text = text
+				Button.ResetOnSpawn = false
 
 				ButtonCorner.CornerRadius = UDim.new(0, 4)
 				ButtonCorner.Name = "ButtonCorner"
